@@ -7,7 +7,7 @@ urlpatterns = [
     
     path('', views.registration,name='register'),
     path('Verify/',views.verify,name='Verify'),
-    path('/Reg.html/',views.register,name="Reg"),
+    path('Reg.html/',views.register,name="Reg"),
     # path('Register.html/', views.registration, name='register'),
     # Dashboard URL (index.html)
   # Root URL shows dashboard

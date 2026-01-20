@@ -29,5 +29,5 @@ urlpatterns = [
      path("",include('tilefl_app.urls')),
     path('Register.html/',include('tilefl_app.urls')),
     path('Register.html/Verify/',include('tilefl_app.urls')),
-    path('Reg.html/',views.register),   
+    # path('Reg.html/',views.register),   
     ]

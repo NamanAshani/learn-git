@@ -62,7 +62,6 @@ def verify(request):
 
     return redirect("home")
 
+
 def register(request):
-    # if not request.session.get("admin_verified"):
-    #     return redirect("home")
-    return render(request,'/Reg.html/')
+    return render(request,'Reg.html')

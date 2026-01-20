@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d6efd;   /* Blue background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 420px;
+            margin: 90px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 12px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #0d6efd;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Register Employee</h2>
+
+    <form action="home" method="post">
+     {% csrf_token %}
+        <label>Employee Name</label>
+        <input type="text" name="name" placeholder="Enter employee name" required>
+
+        <label>Employee ID</label>
+        <input type="text" name="employee_id" placeholder="Enter employee ID" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter email address" required>
+
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" placeholder="Enter mobile number" required>
+
+        <label>Department</label>
+        <select name="department">
+            <option value="">Select Department</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+            <option value="Operations">Operations</option>
+        </select>
+
+        <label>Designation</label>
+        <input type="text" name="designation" placeholder="Enter designation">
+
+        <button type="submit">Register Employee</button>
+
+    </form>
+</div>
+
+</body>
+</html>

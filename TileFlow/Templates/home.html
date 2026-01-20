@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TileFlow - Tile Management System</title>
+    <!-- Your existing landing page styles -->
+</head>
+<body>
+    <!-- Your existing landing page content -->
+    
+    <!-- Add login button/link somewhere -->
+    <a href="{% url 'login' %}" class="login-btn">Login to Dashboard</a>
+    
+    <!-- Or if you want a separate dashboard button -->
+    <a href="{% url 'index' %}" class="dashboard-btn">Go to Dashboard</a>
+    <!-- Note: This will redirect to login if not authenticated -->
+</body>
+</html>

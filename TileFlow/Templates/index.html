@@ -527,7 +527,7 @@
                 </div>
                 
                 <button class="login-btn" id="openLogin">
-                    <i class="fas fa-sign-in-alt"></i> Login
+                    <i class="fas fa-sign-in-alt"></i> <a href="Registration/login.html" style="color:white"> Login </a>
                 </button>
             </div>
         </div>
@@ -544,7 +544,7 @@
                     efficiently manage inventory, dispatch, employees, and operations from a single dashboard.
                 </p>
                 <button class="login-btn" id="openLoginHero">
-                    <i class="fas fa-rocket"></i> Get Started
+                    <i class="fas fa-rocket"></i> <a href="Register.html" style="color:white">  Get Started</a>
                 </button>
             </div>
 
@@ -689,7 +689,7 @@
         </div>
     </section>
 
-    <!-- Login Modal -->
+    {% comment %} <!-- Login Modal -->
     <div class="modal-overlay" id="loginModal">
         <div class="modal-content">
             <div class="close-modal" id="closeModal">&times;</div>
@@ -712,7 +712,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> {% endcomment %}
 
     <!-- Footer -->
     <footer id="about">
@@ -743,7 +743,7 @@
 
     <script>
         // Login Modal Functionality
-        const openLoginBtn = document.getElementById('openLogin');
+        {% comment %} const openLoginBtn = document.getElementById('openLogin');
         const openLoginHeroBtn = document.getElementById('openLoginHero');
         const closeModalBtn = document.getElementById('closeModal');
         const loginModal = document.getElementById('loginModal');
@@ -757,23 +757,23 @@
         openLoginHeroBtn.addEventListener('click', () => {
             loginModal.style.display = 'flex';
         });
-        
+         {% endcomment %}
         // Close modal when X is clicked
         closeModalBtn.addEventListener('click', () => {
             loginModal.style.display = 'none';
         });
         
         // Close modal when clicking outside the modal content
-        window.addEventListener('click', (event) => {
+        {% comment %} window.addEventListener('click', (event) => {
             if (event.target === loginModal) {
                 loginModal.style.display = 'none';
             }
-        });
+        }); {% endcomment %}
         
         // Handle login form submission
-        loginForm.addEventListener('submit', (event) => {
+        {% comment %} loginForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            
+             {% endcomment %}
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             

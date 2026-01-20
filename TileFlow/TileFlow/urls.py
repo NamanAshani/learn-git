@@ -15,10 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from . import views
+from django.contrib.auth import views as auth_views
+
+admin.site.site_header = 'TileFlow'
+admin.site.site_title = 'TileFlow Admin Portal'
+admin.site.index_title = 'Welcome to the Admin Portal'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,name='home')
-]
+     path('',views.home,name="home"),
+     path("",include('tilefl_app.urls')),
+    path('Register.html/',include('tilefl_app.urls')),
+    path('Register.html/Verify/',include('tilefl_app.urls')),
+    path('Reg.html/',views.register),   
+    ]
